@@ -1,0 +1,58 @@
+import styled from "styled-components";
+import { useState, useEffect } from "react";
+import Card from "@/components/Card";
+
+const QuestionsContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: 5%;
+`;
+
+const tag = "reactjs";
+const urlApi = `https://api.stackexchange.com/2.2/questions?order=desc&sort=hot&tagged=${tag}&site=stackoverflow`;
+
+function Questions() {
+  const [loading, setLoading] = useState(false);
+  const [questions, setQuestions] = useState([]);
+  const [questionsCount, setQuestionsCount] = useState(0);
+
+  useEffect(() => {
+    async function fetchData() {
+      const data = await fetch(urlApi);
+      const result = await data.json();
+
+      if (result) {
+        setQuestionsCount(result.items.length);
+        setQuestions(result.items);
+        setLoading(false);
+      }
+    }
+
+    fetchData();
+  }, []);
+
+  return (
+    <QuestionsContainer>
+      <h2>Questions tagged with{` ${tag} (${questionsCount})`} </h2>
+      {loading ? (
+        <span>Loading...</span>
+      ) : (
+        <div>
+          {questions.map((question) => (
+            <Card
+              key={question.question_id}
+              title={question.title}
+              views={question.view_count}
+              answers={question.answer_count}
+            />
+          ))}
+        </div>
+      )
+
+      }
+    </QuestionsContainer>
+  );
+}
+
+export default Questions;

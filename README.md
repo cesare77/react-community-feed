@@ -50,5 +50,25 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 ## Starting project setup and structure scaffolding
 `npx create-next-app@latest react-community-feed` to create a Next.js project with ESLint, Tailwind, App Router.
 
+`npm run dev` to run application that will become available at http://localhost:3000
+
+`npm install styled-components` to add packages for styled components in the project and then to use them to create reusable styled components
+
+## Routing with Next.js
+
+We use _react-router_ package to add declarative routing, in Next.js the folder _pages_ is used for routing as a starting point.
+
+The new _questions_ page is added by creating a folder called _questions_ with an _index.jsx_ file inside of it or we could create a file called _questions.jsx_ without any folder structure.
+
+To retrieve data from _Stack Overflow_ for the application we use an API that returns all the questions that are posted with tag _reactjs_.
+
+This is the stackoverflow API:
+https://api.stackexchange.com/2.2/questions?order=desc&sort=hot&tagged=reactjs&site=stackoverflow
+
+It's possible to find more information on above API on the following link:
+https://api.stackexchange.com/docs/questions#order=desc&sort=hot&tagged=reactjs&filter=default&site=stackoverflow&run=true
+
+
+
 > [!NOTE]
 > Note ...
