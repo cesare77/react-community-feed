@@ -68,7 +68,24 @@ https://api.stackexchange.com/2.2/questions?order=desc&sort=hot&tagged=reactjs&s
 It's possible to find more information on above API on the following link:
 https://api.stackexchange.com/docs/questions#order=desc&sort=hot&tagged=reactjs&filter=default&site=stackoverflow&run=true
 
+> Relative commit: setup project and first route implementation without SSR.
 
+Now we create routes that supports parameters and the new route will display a specific question using Stack Overflow endpoint API.
+We create a new file inside questions folder calle _[id].jsx_ where id is the question's id and the parameter that we use with a _Next.js_ Hook routing library.
+
+This is the Stack Overflow API to get a single question by parameter:
+https://api.stackexchange.com/2.2/questions/${id}?site=stackoverflow
+
+The endpoint API that gets a question by its id returns an array, as it expects multiple IDs at once, here we provide only one id therefore we need to get the first items in the returned array.
+
+We now use the _Link_ component from the routing library of _Next.js_ in the _Questions_ component to create a link with its ID and every _Link_ component needs to be wrapped by a component that is able to do routing like a styled _a_ element.
+
+> Documentation for _Link_ component: https://nextjs.org/docs/pages/api-reference/components/link#passhref
+
+> Todo: it's needed to fix problem/error with nested _a_ rised by an incorrect use of styled_component.
+> Todo: It's needed to fix error when change _/_ route to point to _Questions_ component.
+
+> Relative commit: Handle questions link route to the single question details view.
 
 > [!NOTE]
 > Note ...
