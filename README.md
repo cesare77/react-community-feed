@@ -94,6 +94,8 @@ If this field has a _true_ value we can request more questions by adding the _pa
 
 We use _useRouter_ Hook to get the query strings from URL and to implement pagination.
 
+> Relative commit: Add Pagination feature
+
 
 > [!NOTE]
 > Note ...
