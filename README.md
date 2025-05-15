@@ -96,6 +96,24 @@ We use _useRouter_ Hook to get the query strings from URL and to implement pagin
 
 > Relative commit: Add Pagination feature
 
+## Server Side Rendering (SSR) implementation
+
+We'll use the _Next.js_ method _getServerSideProps_ that retrieve data server side on every request.
+There are other methods as _getStaticProps_ and _getStaticPaths_ that generate the content statically ad build time.
+
+> More on _Next.js_ data fetching here: https://nextjs.org/docs/pages/building-your-application/data-fetching/get-server-side-props.
+
+> Todo: Ater fix of main route for home '/' add SSR in the home page by importing _getServerSideProps_ method and using it in another method that fetch the data from the server.
+
 
 > [!NOTE]
-> Note ...
+> Debug Server side, i used this link https://nextjs.org/docs/app/guides/debugging.
+> I installed first cross-env with `npm install cross-env` but the i followw the visula studio part of the guide with lanch.json file.
+
+> Relative commit: SSR implementation + Debug configuration.
+
+## Implement SEO with head tags
+...
+
+> [!NOTE]
+> ...
