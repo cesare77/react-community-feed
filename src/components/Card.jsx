@@ -14,11 +14,11 @@ const Title = styled.h2`
   color: black;
 `;
 const Count = styled.span`
-  color: darkGray;
+  color: gray;
 `;
 function Card({ title, views, answers }) {
   return (
-    <CardWrapper>
+    <CardWrapper className="card">
       <Title>{title}</Title>
       <Count>{`Views: ${views} | Answers: ${answers}`}</Count>
     </CardWrapper>

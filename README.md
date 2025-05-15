@@ -83,9 +83,17 @@ We now use the _Link_ component from the routing library of _Next.js_ in the _Qu
 > Documentation for _Link_ component: https://nextjs.org/docs/pages/api-reference/components/link#passhref
 
 > Todo: it's needed to fix problem/error with nested _a_ rised by an incorrect use of styled_component.
+
 > Todo: It's needed to fix error when change _/_ route to point to _Questions_ component.
 
 > Relative commit: Handle questions link route to the single question details view.
+
+## Routing and Pagination
+The _Stack Overflow_ API endopoint to retrieve questions tagged by a specific tag return a field called _has\_more_.
+If this field has a _true_ value we can request more questions by adding the _page_ query string parameter to the API request and we can use this to implement pagination of the result.
+
+We use _useRouter_ Hook to get the query strings from URL and to implement pagination.
+
 
 > [!NOTE]
 > Note ...

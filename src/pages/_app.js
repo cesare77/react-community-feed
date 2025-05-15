@@ -10,7 +10,12 @@ const GlobalStyle = createGlobalStyle`
 sans-serif; 
     -webkit-font-smoothing: antialiased; 
     -moz-osx-font-smoothing: grayscale; 
-  } 
+  }
+
+  .question-link,
+  .pagination-link {
+    text-decoration: none;
+  }
 `;
 
 function MyApp({ Component, pageProps }) {
