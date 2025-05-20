@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Head from "next/head";
 
 const HeaderWrapper = styled.div`
   background-color: orange;
@@ -16,12 +17,16 @@ const Title = styled.h1`
   pointer-events: none;
 `;
 
-function Header() {
-  return (
+const Header = () => (
+  <>
+    <Head>
+      <title>React SSR Community Feed</title>
+      <meta name="description" content="This is a React SSR Community feed that us Stack Overflow API" />
+    </Head>
     <HeaderWrapper>
       <Title>React SSR Community Feed</Title>
     </HeaderWrapper>
-  );
-}
+  </>
+);
 
 export default Header;

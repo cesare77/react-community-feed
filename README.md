@@ -113,7 +113,9 @@ There are other methods as _getStaticProps_ and _getStaticPaths_ that generate t
 > Relative commit: SSR implementation + Debug configuration.
 
 ## Implement SEO with head tags
-...
+Next.js can define head tags in any component that is rendered by importing _Head_ from _next/head_ and when components are nested _Next_ will use the lowest definition of _Head_.
+
+> Relative commit: adding SEO with head to application. 
 
 > [!NOTE]
 > ...
