@@ -117,5 +117,11 @@ Next.js can define head tags in any component that is rendered by importing _Hea
 
 > Relative commit: adding SEO with head to application. 
 
+# Create form to dynamically set tag for Community Feed
+> Todo:Add a text field to find for a specific tag in _Stack Overflow_.
+
+> Todo: change the structure of the app to reflect the current corret implementation for Next js App.
+> The new implementation mesu to follow the logic explained in this link: https://nextjs.org/docs/app/getting-started/project-structure.
+
 > [!NOTE]
 > ...
